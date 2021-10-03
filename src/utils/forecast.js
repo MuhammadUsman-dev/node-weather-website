@@ -9,6 +9,7 @@ const forecast = (lat, long, callback) => {
       callback('Invalid data entered, Could not get the location', undefined);
     } else {
       const { current } = body;
+      console.log(current);
       callback(undefined, current);
     }
   });
