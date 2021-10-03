@@ -62,7 +62,7 @@ app.get('/weather', (req, res) => {
           return res.send({ error });
         }
         res.send({
-          forecast: `${weather_descriptions[0]}. Today is ${temperature} degrees but it feels like ${feelslike} degrees`,
+          forecast: `${weather_descriptions[0]}. Today is ${temperature} degrees in ${address1} but it feels like ${feelslike} degrees`,
           location,
           address: address1,
         });

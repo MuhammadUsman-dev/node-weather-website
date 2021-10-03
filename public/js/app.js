@@ -9,7 +9,6 @@ weatherForm.addEventListener('submit', (e) => {
   const location = search.value;
   messageOne.textContent = 'loading!';
   messageTwo.textContent = '';
-  messageThree.textContent = '';
 
   const url = `http://localhost:3000/weather?address=${location}`;
   fetch(url).then((response) => {
@@ -19,7 +18,6 @@ weatherForm.addEventListener('submit', (e) => {
       } else {
         messageOne.textContent = data.forecast;
         messageTwo.textContent = data.location;
-        messageThree.textContent = data.address;
       }
     });
   });
